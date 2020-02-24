@@ -5,34 +5,94 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+    <link
+        rel="stylesheet"
+        href="https://use.fontawesome.com/releases/v5.7.1/css/all.css"
+        integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
+        crossorigin="anonymous"
+        />
     <style>
+        img{
+
+        }
+        button{
+            outline: none;
+            background-color: black;
+            border: none;
+            color: white;
+        }
         body{
             margin: 0px;
             font-family: 'Roboto', sans-serif;
         }
         .container{
             background-color: black;
-        }
-        .logo img{
-            width: 200px;
-        }
-        .header{
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 10px;
-        }
-        .body{
-            background-image: linear-gradient(to right, gray, black);
-            height: 500px;
-        }
-        .explore{
-            color: orange;
-            font-size: 18px;
+            color: white;
+            height: 600px
         }
         a{
             color: white;
             text-decoration: none;
+        }
+        .container > .header{
+            display: flex;
+            justify-content: space-between;
+        }
+        .container > .header > .logo{
+            display: flex;
+            align-items: center;
+            margin-right: -85px;
+        }
+        .container > .header > .logo img{
+            width: 200px;
+            display: flex;
+            align-items: center;
+        }
+        .container > .header > .explore{
+            padding-right: 17vw;
+        }
+        .container > .header > .explore > .text{
+            color: orange;
+        }
+        .container > .header > .explore > .link-wrappers {
+            display: flex;
+            justify-content: space-between;
+            width: 25vw;
+        }
+        .container > .body{
+            background-image: linear-gradient(to left, grey, black);
+            display: grid;
+            grid-template-columns: 1.2fr 1fr;
+        }
+        .container > .body > .image > img{
+            width: 40vw;
+        }
+        .container > .body > .content{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .container > .body > .content > .text{
+            font-size: 1.5em;
+            width: 40vw;
+        }
+        .container > .footer{
+            height: 30px;
+            background-color: gray;
+        }
+        .container > .footer > .links{
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+        .links > .lwrap{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 30px;
+            border: 2px solid black;
+            width: 25vw;
         }
     </style>
 </head>
@@ -52,17 +112,17 @@
                     <a href="#">Posts</a>
                     <a href="#">Collections</a>
                     <button>
-                        Spark
+                        Spark <i class="fas fa-caret-down"></i>
                     </button>
                 </div>
             </div>
             <div class="acount-links">
                 <div class="right-links">
-                    <button>
+                    <button href="#">
 
                     </button>
-                    <button>
-
+                    <button href="#">
+                        <i class="fas fa-search"></i>
                     </button>
                     <a href="#">Login</a>
                     <a href="#">Sign Up</a>
@@ -71,7 +131,7 @@
         </div>
 
         <div class="body">
-            <div class="text">
+            <div class="content">
                 <div class="text">
                     <p>CodePen is a social development environment for front-end designers and developers.</p>
                     <p class="sub">It's the best place to build and deploy a website, show offf your work, build test cases, and find inspiration</p>                
@@ -80,27 +140,21 @@
                     <a href="#">Sign Up for Free</a>
                     <a href="#">Learn More</a>
                 </div>
-                </div>
-                <div class="image">
-                    <div class="image-text">
-                        This is Codepen!
-                    </div>
-                    <img src="cat.jfif">
-                </div>
-            </div>
-            <div class="links">
-
             </div>
             <div class="image">
-
+                <div class="image-text">
+                    This is Codepen!
+                </div>
+                <img src="cat.jfif">
             </div>
+        </div>    
 
             <div class="footer">
                 <div class="links">
-                    <a href="#">CodePen for <strong>Teams</strong></a>
-                    <a href="#">CodePen for <strong>Education</strong></a>
-                    <a href="#">CodePen for <strong>Privacy</strong></a>
-                    <a href="#">CodePen for <strong>Writing</strong></a>
+                    <a href="#" class="lwrap">CodePen for <strong>Teams</strong></a>
+                    <a href="#" class="lwrap">CodePen for <strong>Education</strong></a>
+                    <a href="#" class="lwrap">CodePen for <strong>Privacy</strong></a>
+                    <a href="#" class="lwrap">CodePen for <strong>Writing</strong></a>
                 </div>
             </div>
         </div>
